@@ -79,7 +79,6 @@ def logar_he():
     navegador.find_element(By.XPATH,
     '/html/body/div[2]/div/div[1]/div/div[2]/div/div/form/input[2]').send_keys(Keys.ENTER)
 
-# url para Diários do primeiro período: https://sistemahe.com.br/config_periodos_diario_list?locale=pt_BR&periodo=1
 def diarios_1A():
 
     # links que fazem o download direto dos diários - turma 1A:
