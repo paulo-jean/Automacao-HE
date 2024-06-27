@@ -26,11 +26,10 @@ quinto_a = Pastas('1 periodo Diarios/Diarios_5A','5A')
 quinto_b = Pastas('1 periodo Diarios/Diarios_5B','5B')
 
 # Passo 1: iniciando chrome
-navegador = webdriver.Chrome() #executable_path=r'./chromedriver.exe'
+navegador = webdriver.Chrome()
 navegador.implicitly_wait(10)
-#navegador.get('https://www.google.com/')
 
-# modo incógnito:
+# opção de uso do navegador no modo incógnito:
 #options = webdriver.ChromeOptions()
 #options.add_argument("--incognito")
 #navegador = webdriver.Chrome(options=options)
