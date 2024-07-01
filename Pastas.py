@@ -21,8 +21,15 @@ class Pastas:
         return caminho_completo
     
     def mover_arquivos(self, pasta_downloads, destino):
-        ''' função para mover os diarios baixados, da pasta Downloads
+        ''' função para mover os diarios baixados da pasta Downloads
             para a pasta criada da respectiva turma.
+
+            Argumentos passados para a função:
+            pasta_downloads = pasta local de Downloads da máquina do usuário (que será coletada numa def através da biblioteca Pathlib).
+            destino = é a pasta criada com o destino final escolhido pelo user, para onde será movido e armazenados os arquivos pdf's baixados automaticamente.
+            self._turma = recebe um argumento da variável guardada na criação do objeto instanciado,
+            que fará a separação exata de quais os arquivos pdf's que precisam ser movidos,
+            e não somente qualquer ou todos os arquivos pdf's da pasta downloads do usuário.
         '''
         try:
             caminho_origem = f'{pasta_downloads}//*.pdf'
@@ -32,15 +39,3 @@ class Pastas:
                 if self._turma in arquivo:
                     shutil.move(arquivo, destino)
         except: print()
-
-primeiro_a = Pastas('1 periodo Diarios/Diarios_1A','1A')
-primeiro_b = Pastas('1 periodo Diarios/Diarios_1B','1B')
-segundo_a = Pastas('1 periodo Diarios/Diarios_2A','2A')
-segundo_b = Pastas('1 periodo Diarios/Diarios_2B','2B')
-terceiro_a = Pastas('1 periodo Diarios/Diarios_2A','2A')
-terceiro_b = Pastas('1 periodo Diarios/Diarios_2B','2B')
-terceiro_c = Pastas('1 periodo Diarios/Diarios_2A','2A')
-quarto_a = Pastas('1 periodo Diarios/Diarios_2B','2B')
-quarto_b = Pastas('1 periodo Diarios/Diarios_2B','2B')
-quinto_a = Pastas('1 periodo Diarios/Diarios_2B','2B')
-quinto_b = Pastas('1 periodo Diarios/Diarios_2B','2B')
