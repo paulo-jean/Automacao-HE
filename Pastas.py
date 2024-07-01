@@ -13,6 +13,9 @@ class Pastas:
     
     def criar_pasta(self, origem):
         ''' função para criar a pasta dos diarios da respectiva turma.
+
+            Argumentos passados para a função:
+            
         '''
         caminho_completo = os.path.join(origem, self._caminho)
         try:
