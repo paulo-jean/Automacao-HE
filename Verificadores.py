@@ -89,7 +89,7 @@ class Check2P:
                       except:
                         verificacoes.append("tabela de indicadores vazia ou mal formatada")
 
-                    # Verificar síntese e eixo (última página com tabelas) -> minha versão
+                    # Verificar síntese e eixo (última página com tabelas)
                     if len(tables) > 1:
                         last_table_page = sorted(tables.keys())[-1]
                         # verificar se a ultima pag é curriculo adaptado:
@@ -241,7 +241,7 @@ class Check3P:
                       except:
                         verificacoes.append("tabela de indicadores vazia ou mal formatada")
 
-                    # Verificar síntese e eixo (última página com tabelas) -> minha versão
+                    # Verificar síntese e eixo (última página com tabelas)
                     if len(tables) > 1:
                         second_last_page = sorted(tables.keys())[-2]
                         # verificar se a ultima pag é curriculo adaptado:
