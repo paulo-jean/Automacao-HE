@@ -59,7 +59,7 @@ Downloader ⏬
 
 Verificador de Diários 🔎
 * **Tratamento de Erros:** Aprimorar o tratamento de erros para fornecer mensagens mais informativas e lidar com diferentes tipos de PDFs.
-* **Flexibilidade:** Tornar o script mais flexível para lidar com diferentes formatos de diários, permitindo ao usuário configurar as páginas e campos a serem verificados.
+* **Flexibilidade:** Tornar o script mais flexível para lidar com diferentes formatos de diários, permitindo ao usuário configurar as páginas e campos a serem verificados. Podendo aqui ser incluído um método usando alguma IA para ler os PDFs.
 * **Relatórios Mais Detalhados:** Gerar relatórios mais detalhados, incluindo informações sobre as linhas e colunas específicas com problemas.
 
 ## Contribuições 🤝
