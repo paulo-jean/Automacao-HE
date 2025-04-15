@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verificador de Diários do HE</h1>
+        
+        <div class="file-selection">
+            <label for="file-input" class="file-label">Selecione os PDFs para verificar</label>
+            <input type="file" id="file-input" accept=".pdf" multiple class="file-input">
+            <div id="selected-files" class="selected-files">
+                <p>Nenhum arquivo selecionado</p>
+            </div>
+        </div>
+        
+        <button id="start-btn" class="btn primary-btn" disabled>Iniciar Verificação</button>
+        
+        <div id="progress-container" class="progress-container hidden">
+            <h3>Verificando Diários...</h3>
+            <p id="status-label">Aguardando início...</p>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="progress-text">0%</p>
+            <button id="cancel-btn" class="btn secondary-btn">Cancelar</button>
+        </div>
+        
+        <div id="results-container" class="results-container hidden">
+            <h3>Resultados da Verificação</h3>
+            <div id="results-content"></div>
+            <button id="download-report-btn" class="btn primary-btn">Baixar Relatório</button>
+            <button id="new-check-btn" class="btn secondary-btn">Nova Verificação</button>
+        </div>
+    </div>
+
+    <!-- Carregando as bibliotecas PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+    <!-- Carregando nossos scripts -->
+    <script src="pdfChecker-corrected2.js"></script>
+    <script src="progressWindow.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
