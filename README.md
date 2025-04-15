@@ -22,11 +22,12 @@ O script usa o `Selenium` para automatizar um navegador web (Chrome), fazer logi
 4. **Download e Organização:** Após a seleção, o script baixa os diários de cada turma selecionada, usando links predefinidos. Os PDFs são salvos na pasta de Downloads do usuário e, em seguida, movidos para as pastas correspondentes às turmas dentro do diretório escolhido no primeiro passo.
 5. **Finalização:** Uma mensagem de aviso informa ao usuário que o processo foi concluído.
 
-## Verificador de Diários 🔎 
+## Verificador de Diários (checker) 🔎 
 ### Como funciona ⚙️
 
-O script utiliza as bibliotecas `pdfplumber` e `camelot` para extrair tabelas e texto dos PDFs dos diários. Em seguida, aplica uma série de verificações para garantir que os campos obrigatórios estejam preenchidos corretamente. Os resultados da verificação são salvos em um arquivo de texto. 
-*Obs: o script executável precisa estar no mesmo diretório que os arquivos PDFs que deseja verificar.
+Atualmente, existem duas versões, a primeira desenvolvida em python, e a mais recente em Javascript e depois exportada como uma versão Desktop utilizando Electron.
+O script python utiliza as bibliotecas `pdfplumber`, `PyPDF` e `camelot` para extrair tabelas e texto dos PDFs dos diários. Em seguida, aplica uma série de verificações para garantir que os campos obrigatórios estejam preenchidos corretamente. Os resultados da verificação são salvos em um arquivo de texto. 
+Já na versão Web com Javascript, ele usa bibliotecas de leitura para PDFs compatíveis com a linguagem, além de visuais estilizados com CSS e HTML para abrir em uma página web para melhorar a experiência do usuário.
 
 **Passo a passo:**
 
@@ -35,10 +36,11 @@ O script utiliza as bibliotecas `pdfplumber` e `camelot` para extrair tabelas e 
 3. **Verificação de Indicadores:** Verifica se os indicadores (A, B, C, D, RI) foram preenchidos na penúltima página com tabelas.
 4. **Verificação de Síntese e Eixo:** Verifica se a síntese e o eixo de formação foram preenchidos na última página com tabelas (com tratamento especial para currículos adaptados).
 5. **Verificação de Conteúdos e Avaliações:** Verifica se os conteúdos e avaliações foram preenchidos, buscando por "Avaliações:" em todas as páginas.
-6. **Geração de Relatório:** Os resultados da verificação são exibidos no console e salvos em um arquivo TXT chamado "diarios verificados.txt" no diretório atual.  O arquivo é aberto automaticamente após a execução do script.
+6. **Geração de Relatório:** Os resultados da verificação são exibidos no console e salvos em um arquivo TXT chamado "diarios verificados.txt" no diretório atual. O arquivo é aberto automaticamente após a execução do script (versão python).
 
 ## Tecnologias e Bibliotecas Utilizadas 📚
 
+* **Javascript/CSS/HTML:** Linguagem de programação principal.
 * **Python:** Linguagem de programação principal.
 * **Selenium:** Para automatizar a interação com o navegador web.
 * **WebDriverManager:** Para gerenciar automaticamente o driver do Chrome.
